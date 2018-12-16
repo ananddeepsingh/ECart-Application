@@ -1,0 +1,78 @@
+
+	<h1 class="primary-heading"> What’s Trending </h1>
+	<main class="main-container">
+		<section class="product-grid">
+			<div class="main" ng-repeat="data in JSONdata"> 
+					<!-- FOURTH EXAMPLE -->
+					<div class="view view-eighth">
+						<img src="{{data.p_path}}" />
+						<div class="mask">
+							<h2 class="product-name">{{data.p_name}}</h2>
+							<p class="product-style">{{data.p_variation}} </span></p>
+							
+							<button data-pid={{data.p_id}} id="viewProduct" ng-click="viewLightBox()" class="info lightBox">View</button>
+						</div>
+					</div>
+				
+			</div>
+		</section>
+	</main>
+
+	
+
+<!-- Lightbox template -->
+
+<div id="overlay-template" ng-if="overlayProduct">
+		<div id="contentBox" class=" col-xs-12">
+			<span class="close" ng-click="toggleCloseBtn()">X</span>
+			<div class="product-img col-xs-4  pull-right"><img ng-src="{{overlayProduct.p_path}}" /></div>
+			<div class="overlay-mask  col-xs-8">
+				<h2 class="overlay-product-name col-xs-12">{{overlayProduct.p_name}}</h2>
+				<div class="overlay-product-price col-xs-12"><span class="currency">$</span> <span class="price">{{overlayProduct.p_price}}</span></div>
+				
+				<div class="overlay-colors-available  col-xs-12">
+					<h6>Available Colors</h6>
+					<div class="color-wrapper text-center ">
+						<div class="ng-hide">{{colorsDB = overlayProduct.p_available_options.colors}}</div>
+						
+						<div class="color-group checkboxFive " ng-repeat="colors in colorsDB">
+							<input type="checkbox" ng-model="colors.selected" id="checkboxFiveInput{{colors.name}}" value="{{colors.name}}" />
+							<label for="checkboxFiveInput{{colors.name}}" style="background-color: {{colors.hexcode}}; "></label>
+						</div>
+					</div>
+				</div>
+				<div class="overlay-size">
+					
+					<select
+						class="size col-xs-6"
+						ng-change="getSize(overlayProduct.selectedSize)" 
+						ng-options="o.code as o.name for o in overlayProduct.p_available_options.sizes"
+						ng-model="overlayProduct.selectedSize">
+						<option value="">Select Size</option>
+					</select>
+				
+					<select class="qty col-xs-6" ng-model="overlayProduct.qty">
+						<option value="">Select Quantity</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+					</select>
+				</div>
+				<div class="overlay_style text-center  col-xs-12">Style - <span>{{overlayProduct.p_style}}</span></div>
+				<div class="overlay-addToBag-wrapper col-xs-12">
+					<button class="overlay-addToBag" ng-click="addToBag(overlayProduct)">Add to Bag</button>
+				</div>
+			</div>
+		</div>
+		<div id="shadeBox"></div>
+	
+</div>
+
+
+

@@ -1,0 +1,96 @@
+
+<div id="cart-template">
+	<div class="data-container" ng-if="jsonData.length == 0">
+		<h1 class="primary-heading"> No Item(s) in your cart </h1>
+	</div>
+	<div class="data-container" ng-if="jsonData.length > 0">
+		<h1 class="primary-heading"> YOUR SHOPPING BAG </h1>
+		<section class="product-grid col-lg-12">
+			<aside class=" cart-heading">
+				<div class="col-lg-6"><span>{{jsonData.length}}</span> items</div>
+				<div class="col-lg-2 pull-right">PRICE</div>
+				<div class="col-lg-2 pull-right">QTY</div>
+				<div class="col-lg-2 pull-right">SIZE</div>
+			</aside>
+			
+			<aside class="cart-row col-lg-12"  ng-repeat="data in jsonData" data-productId = "{{data.id}}">
+			
+				<div class="col-lg-6 product-wrapper no-padding-left">
+					<div class="product-image"> 
+						<img src="{{data.p_path}}" alt="" />
+					</div>
+					<div class="product-details" >
+						<div class="product-name">{{data.p_name}}</div>
+						<div class="product-style">Style #: <span class="style-val">{{data.p_style}}</span></div>
+						<div class="product-color">
+							<div class="pull-left">Selected Color #: &nbsp;</div>
+							<div class="pull-left">
+								<span class="color-box" ng-repeat="colors in data.p_selectedColors" data-val="{{colors.name}}" style="background-color: {{colors.hexcode}}; "></span>
+							
+							</div>
+						</div>
+						
+					</div>
+					<div class="quick-links">
+						<button ng-click="viewLightBox()"  class="lightBox">Edit</button>
+						<button> X Remove</button>
+						<button> Save For Later</button>
+					</div>
+				</div>
+				<div class="col-lg-2 pull-right cart-price"><span class="currency">$</span> <span class="price">{{data.p_price}}</span></div>
+				<div class="col-lg-2 pull-right cart-qty"><input type="text" name="qty" value="{{data.p_quantity}}" /> </div>
+				<div class="col-lg-2 pull-right cart-size">{{data.p_size}}</div>
+			</aside>
+		</section>
+		<section class="billing-section">
+		
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="col-lg-2">
+						<h3 class="help">Need help or have questions?</h3>
+						<p>Call Customer Service at 1-800-555-5555</p>
+						<p><a href="#">Chat with one of our sttylists</a></p>
+						<p><a href="#">See return &amp; exchange policy</a></p>
+					</div>
+					<div class="col-lg-10 pull-right checkout-section">
+						<div class="promo-code-wrapper col-xs-12 no-padding">
+							<div class="col-xs-6 promo-msg">Enter Promotion Code or Gift Card</div>
+							<div class="col-xs-6 text-right no-padding-right">
+								<input type="text" name="promo-code" class="promo-code" value=""/>
+								<button class="apply-btn" ng-click="getPromo()">APPLY</button>
+							</div>
+						</div>
+						<div class="sub-total spacer">
+							<div class="col-xs-6 secondary-heading">SubTotal</div>
+							<div class="col-xs-6 text-right"><sup>$</sup><span class="price">{{subTotal}}</span></div>
+						</div>
+						
+						<div class="promoCode-applied spacer" ng-if="promotionCode.length > 0">
+							<div class="col-xs-6 secondary-heading">Promotion Code <strong>{{promotionCode}}</strong> Applied</div>
+							<div class="col-xs-6 text-right"><span class="add-delete">-</span><sup>$</sup><span class="price">{{discountRecieved}}</span></div>
+						</div>
+						
+						<div class="estimated-shipping-wrapper spacer">
+							<div class="col-xs-6 secondary-heading">
+								<div class="estimated-shipping">ESTIMATED SHIPPING* </div>
+								<div class="msg">You qualify for free shipping because your order is over %50*</div>
+							</div>
+							<div class="col-xs-6 text-right">FREE</div>
+						</div>
+						<div class="estimated-total-wrapper spacer">
+							<div class="col-xs-6 secondary-heading">
+								<div class="estimated-total">ESTIMATED Total* </div>
+								<div class="msg">Tax will be applied during checkout</div>
+							</div>
+							<div class="col-xs-6 text-right totalPrice"><sup>$</sup><span>{{estiTotal}}</span></div>
+						</div>
+						<div class="checkout-btn spacer">
+							<div class="col-xs-12 secondary-heading text-right">Continue Shopping <button>CHECKOUT</button></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+

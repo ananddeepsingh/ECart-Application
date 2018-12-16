@@ -1,0 +1,602 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+.no-padding{
+	padding: 0;
+}
+.no-padding-left{
+	padding-left: 0;
+}
+.no-padding-right{
+	padding-right: 0;
+}
+.button{
+	width: auto;
+	height: auto;
+	border: none;
+}
+/* Custom Code*/
+body{
+	background: #f9f9f9 url(../images/white_texture.jpg) repeat top left;	
+}
+.navbar{
+	z-index: 1;
+}
+.main-container{
+	width: 96%;
+	margin: 0 auto;
+	float: inherit;
+	overflow: hidden;
+}
+
+.primary-heading{
+	font-size: 5em;
+	color: #999;
+    margin: 1em 0 .3em;
+    text-align: center;
+	font-family: 'Lora', serif;
+}
+.cart-icon{
+	position: relative;
+}
+.cart-icon a{
+	padding: 0 !important;
+}
+.cart-icon .cart-count{
+	position: absolute;
+    top: 6px;
+    right: 5px;
+    color: #fff;
+    z-index: 1;
+    background: blue;
+    border-radius: 11px;
+    padding: 5px 7px;
+}
+.cart-icon .primary-cartIcon{
+	outline: none;
+	background: none;
+	border: none;
+    margin-top: 6px;
+}
+.cart-icon .glyphicon{
+	font-size: 2em;
+}
+.cart-icon .btn-default:hover{
+	background: none;
+}
+.cart-heading{
+	border-bottom: 8px solid #dedede;
+	padding: 1em 0 2em;
+}
+
+.cart-row{
+	margin: 1em 0 1.5em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #dedede;
+}
+
+.cart-row:last-child{
+	border-bottom: 10px solid #dedede;
+}
+
+.cart-qty input{ 
+	width: 40px;
+    text-align: center;
+	font-size: .9em;
+}
+
+.cart-price{
+	position: relative;
+	padding-left: 33px;
+}
+.cart-price .currency{
+	position: absolute;
+	top: -5px;
+	left: 23px;
+	font-size: .9em;
+}
+.product-grid{
+    float: inherit;
+    width: 90%;
+    margin: 0 auto;
+    background: #fff;
+    overflow: hidden;
+}
+
+.product-wrapper{
+	position: relative;
+}
+.product-image{
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin-right: 30px;
+}
+.product-image img{
+	width: 100%;
+	height: 100%;
+}
+.product-name{
+	font-size: .8em;
+	margin-bottom: .5em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.style-val{
+	text-transform: uppercase;
+}
+.product-style,
+.product-color{
+	color: #999;
+	font-size: .8em;
+	margin-bottom: .2em;
+	line-height: 2em;
+}
+.quick-links{
+	position: absolute;
+	bottom: 0;
+	right: 33%;
+}
+
+.quick-links button{
+	color: #999;
+	font-size: .8em;
+	border: none;
+	padding: 0 6px;
+	background: none;
+	display: inline-block;
+	outline: none;
+}
+
+
+
+.help{
+	margin-bottom: 1em;
+	font-size: .9em;
+	color: #666;
+}
+
+/*
+* Landing Page [start]
+*/
+.product-grid ul{
+	list-style: none;
+}
+.product-details{
+	float: left;
+	margin-top: 10px;
+}
+/*
+* Landing Page [end]
+*/
+
+/*
+* Billing Section [start]
+*/
+.checkout-section{
+	font-size: .9em;
+}
+
+.billing-section{
+	background: #fff;
+    margin-bottom: 2em;
+    width: 90%;
+    margin: 0 auto;
+}
+.billing-section p{
+	margin-bottom: 1em;
+	font-size: .9em;
+	color: #999;
+}
+.billing-section p a{
+	text-decoration: underline;
+	color: #999;
+}
+.billing-section p a:hover{
+	text-decoration: none;
+}
+
+.promo-code-wrapper{
+	border-bottom: .7em solid #dedede;
+	padding-bottom: .8em;
+	margin-bottom: 2em;
+}
+.promo-msg{
+	line-height: 2em;
+}
+.promo-code{
+	width: 80%;
+	height: 2em;
+	line-height: 2em;
+	border: 1px solid #dedede;
+}
+
+.apply-btn{
+	border: 1px solid #dedede;
+	background: transparent;
+	padding: .6em;
+	font-size: .89em;
+}
+.apply-btn:focus{
+	outline: 0;
+}
+
+.spacer{
+	margin: 1em 0;
+	float: left;
+    width: 100%;
+}
+
+.secondary-heading{
+	text-transform: uppercase;
+	color: #333;
+}
+.checkout-section sup{
+	font-size: .8em;
+	margin-right: .3em;
+}
+.msg{
+	font-size: .7em;
+	line-height: 1em;
+	color: #666;
+}
+
+.estimated-shipping-wrapper{
+	padding-bottom: 2em;
+	border-bottom: .7em solid #dedede;
+	
+}
+
+.checkout-btn button{
+	padding: 1em;
+	background: blue;
+	color: #fff;
+	border: none;
+}
+
+.estimated-total,
+.estimated-total-wrapper .totalPrice{
+	font-size: 1.5em;
+	line-height: 2em;
+	font-weight: bold;
+}
+
+
+/*
+* Billing Section [end]
+*/
+
+/*
+* Overlay Style [start]
+*/
+.overlay-mask{
+	padding: 1em;
+	float: left;
+    width: 55%;
+}
+.overlay-product-name{
+	font-size: 1.5em;
+	margin: .5em 0;
+	text-transform: uppercase;
+	font-weight: bold;
+    font-family: 'Lora', serif;
+	text-align: center;
+}
+.overlay-product-price{
+	font-size: 3em;
+    text-align: center;
+	position: relative;
+}
+.overlay-product-price .price{
+	margin-left: 10px;
+}
+.overlay-product-price .currency{
+	font-size: .5em;    
+	position: absolute;
+    top: 0;
+	font-size: .4em;
+    font-family: 'Lora', serif;
+}
+
+.overlay-colors-available h6{
+	font-size: 1em;
+	margin: .5em 0;
+	text-align: center;
+    font-family: 'Lora', serif;
+}
+.overlay-colors-available .color-wrapper{
+	margin-bottom: 1em;
+
+    float: left;
+    padding-left: 40%;
+}
+.color-box{
+	float: left; 
+	width: 20px; 
+	height: 20px;
+    border-radius: 14px;
+	margin-right: 5px;
+    margin-top: 3px;
+}
+
+.color-row.glyphicon{
+	display: inline;
+	font-size: 11px;
+}
+
+.overlay_style{
+    font-family: 'Lora', serif;
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.overlay-size{
+	float: left;
+	width: 90%;
+	padding-left: 10%;
+	margin-bottom: 5%;
+}
+.overlay-size select{
+    font-family: 'Lora', serif;
+	padding: .3em;
+	width: 100px;
+	float: left;
+	    text-transform: capitalize;
+    font-size: .8em;
+}
+.overlay-size .qty{
+	float: left;
+    margin-left: 10px;
+}
+
+.overlay-addToBag-wrapper{
+	float: left;
+	text-align: center;
+}
+.overlay-addToBag{
+	border: none;
+	padding: 1em;
+	background: blue;
+	color: #fff;
+}
+
+.cart-size{
+	text-transform: capitalize;
+}
+/* Overlay Style [start] */
+
+
+/* Lightbox */
+#lightBoxWrapper{
+	/* display: none; */
+}
+#contentBox{
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	width: 50%;
+	height: 70%;
+	margin-left: -150px;
+	margin-top: -100px;
+	border: 2px solid #FFF;
+	background: #FFF;
+	z-index: 1002;
+	overflow: visible;
+	
+}
+#shadeBox{
+	background: #666;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	-moz-opacity: 0.9;
+	opacity:.70;
+	filter: alpha(opacity=70);
+	z-index: 2;
+	
+}
+
+#contentBox{
+	float: right;
+}
+#contentBox img{
+	float: right;
+	width: 100%;
+	max-width: 250px;
+	margin: 1em 0 0 0;
+}
+#contentBox .close{
+	position: absolute;
+    top: -33px;
+    right: -2px;
+    background: #fff;
+    opacity: 1;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.data-container{
+	margin-bottom: 2em;
+}
+/* Custom Color Checkbox [start]*/
+
+.color-wrapper label {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.color-wrapper label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  opacity: 0;
+  transform: rotate(-45deg);
+}
+
+/* Custom Color Checkbox [end]*/
+
+
+/*custom checkbox [start]*/
+.checkboxFive {
+		 width: 25px;
+		position: relative;
+		display: inline-block;
+		margin-right: 6px;
+	}
+		.checkboxFive label {
+			cursor: pointer;
+			position: absolute;
+			width: 25px;
+			height: 25px;
+			top: 0;
+			left: 0;
+			background: #eee;
+			border:1px solid #ddd;
+		}
+		.checkboxFive label:after {
+			opacity: 0.2;
+			content: '';
+			position: absolute;
+			width: 9px;
+			height: 5px;
+			background: transparent;
+			top: 8px;
+			left: 8px;
+			border: 3px solid #333;
+			border-top: none;
+			border-right: none;
+			-webkit-transform: rotate(-45deg);
+			-moz-transform: rotate(-45deg);
+			-o-transform: rotate(-45deg);
+			-ms-transform: rotate(-45deg);
+			transform: rotate(-45deg);
+		}
+		/**
+		 * Create the hover event of the tick
+		 */
+		.checkboxFive label:hover::after {
+			opacity: 0.5;
+		}
+		/**
+		 * Create the checkbox state for the tick
+		 */
+		.checkboxFive input[type=checkbox]:checked + label:after {
+			opacity: 1;
+		}
+/*custom checkbox [end]*/
